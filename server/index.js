@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use('/api', require('./route/index'));
 
-app.use(express.static(path.join('..', 'public')))
-app.use(express.static(path.join('..', 'build')))
+app.use(express.static(path.join(__dirname, '..', 'public')))
+app.use(express.static(path.join(__dirname, '..', 'build')))
 
 app.listen(3000);
