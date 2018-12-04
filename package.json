@@ -2,11 +2,13 @@
   "name": "extrawork",
   "version": "1.0.0",
   "description": "",
-  "main": "bash.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app",
-    "seed": "node seed"
+    "start": "node server",
+    "seed": "node scripts/seed",
+    "build-client-watch": "webpack -w",
+    "start-server-watch": "nodemon --watch server/",
+    "start-dev": "NODE_ENV='development' npm run build-client-watch & NODE_ENV='development' npm run start-server-watch"
   },
   "author": "",
   "license": "ISC",
@@ -15,7 +17,20 @@
     "morgan": "^1.9.1",
     "path": "^0.12.7",
     "pg": "^7.7.1",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
     "request": "^2.88.0",
     "sequelize": "^4.41.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "nodemon": "^1.18.7",
+    "webpack": "^4.27.0",
+    "webpack-cli": "^3.1.2"
   }
 }

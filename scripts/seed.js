@@ -1,4 +1,4 @@
-const { db, Puppy } = require('./db/model/puppies');
+const { db, Puppy } = require('../db/model/puppies');
 
 const puppies = [{
   name: 'Bob',

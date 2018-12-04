@@ -2,7 +2,7 @@ const express = require('express');
 const indexRouter = express.Router();
 const puppyRouter = express.Router();
 
-const { Puppy } = require('../db/model/puppies');
+const { Puppy } = require('../../db/model/puppies');
 
 puppyRouter.get('/', async (req, res, next) => {
   try {
