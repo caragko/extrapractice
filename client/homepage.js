@@ -4,8 +4,8 @@ import Navheader from './navheader'
 import Aboutus from './aboutus'
 import Contactinfo from './contactinfo'
 import Profile from './profile'
-import Puppieslist from './puppieslist'
-// import AllPups from './allpups'
+// import Puppieslist from './puppieslist'
+import AllPups from './allpups'
 
 export default class Homepage extends React.Component {
   render () {
@@ -18,11 +18,11 @@ export default class Homepage extends React.Component {
             </div>
             <Navheader />
           </div>
-          <Route exact path='/puppies' component={Puppieslist} />
+          <Route exact path='/puppies' component={AllPups} />
           <Route path='/puppies/:profileId' component={Profile} />
           <Route exact path='/aboutus' component={Aboutus} />
           <Route path='/contactinfo' component={Contactinfo} />
-          <Route exact path='/' component={Puppieslist} />
+          <Route exact path='/' component={AllPups} />
         </div>
       </Router>
     )
