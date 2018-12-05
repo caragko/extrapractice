@@ -8,10 +8,9 @@ export default class Profile extends Component {
     this.state = {
       puppy: {}
     }
-    this.profile = this.profile.bind(this)
   }
   async componentDidMount () {
-    const puppyId = this.props.match.params.puppyId
+    const puppyId = this.props.match.params.profileId
     const res = await axios.get(`/api/puppies/${puppyId}`)
     this.setState({puppy: res.data})
   }
